@@ -1,23 +1,45 @@
-'use strict';
-angular.module('phonecatApp', [
-    'ngRoute',
-    'phonecatAnimations',
-    'phonecatControllers',
-    'phonecatFilters',
-    'phonecatServices'
-]).config(['$routeProvider',
-    function ($routeProvider) {
+System.register(['./core/core.module', './phone_detail/phone_detail.module', './phone_list/phone_list.module'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
+    var core_module_1, phone_detail_module_1, phone_list_module_1;
+    function configure($routeProvider) {
         $routeProvider.
             when('/phones', {
-            templateUrl: 'partials/phone-list.html',
-            controller: 'PhoneListCtrl'
+            templateUrl: 'js/phone_list/phone-list.html',
+            controller: 'PhoneListCtrl',
+            controllerAs: 'vm'
         }).
             when('/phones/:phoneId', {
-            templateUrl: 'partials/phone-detail.html',
-            controller: 'PhoneDetailCtrl'
+            templateUrl: 'js/phone_detail/phone_detail.html',
+            controller: 'PhoneDetailCtrl',
+            controllerAs: 'vm'
         }).
             otherwise({
             redirectTo: '/phones'
         });
-    }]);
+    }
+    return {
+        setters:[
+            function (core_module_1_1) {
+                core_module_1 = core_module_1_1;
+            },
+            function (phone_detail_module_1_1) {
+                phone_detail_module_1 = phone_detail_module_1_1;
+            },
+            function (phone_list_module_1_1) {
+                phone_list_module_1 = phone_list_module_1_1;
+            }],
+        execute: function() {
+            angular.module('phonecatApp', [
+                'ngAnimate',
+                'ngRoute',
+                core_module_1.default.name,
+                phone_detail_module_1.default.name,
+                phone_list_module_1.default.name
+            ]).config(configure);
+            configure.$inject = ['$routeProvider'];
+            angular.bootstrap(document.documentElement, ['phonecatApp']);
+        }
+    }
+});
 //# sourceMappingURL=app.module.js.map

@@ -1,5 +1,9 @@
-'use strict';
+// 'use strict';
+import Phone from './phone.factory';
+import checkmarkFilter from './checkmark.filter';
 
-angular.module('phonecat.core', [
+export default angular.module('phonecat.core', [
  'ngResource'
-]);
+])
+  .factory('Phone', Phone)
+  .filter('checkmark', checkmarkFilter);

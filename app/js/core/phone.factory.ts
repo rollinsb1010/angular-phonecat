@@ -1,7 +1,7 @@
-'use strict';
+// 'use strict';
 
-angular.module('phonecat.core')
-	.factory('Phone', Phone);
+// angular.module('phonecat.core')
+// 	.factory('Phone', Phone);
 
 Phone.$inject = ['$resource'];
 
@@ -10,3 +10,5 @@ function Phone($resource) {
 		query: {method: 'GET', params:{phoneId: 'phones'}, isArray: true}
 	});
 }
+
+export default Phone;

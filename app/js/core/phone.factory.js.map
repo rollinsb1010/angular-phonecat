@@ -1,1 +1,1 @@
-{"version":3,"file":"phone.factory.js","sourceRoot":"","sources":["phone.factory.ts"],"names":[],"mappings":""}
+{"version":3,"file":"phone.factory.js","sourceRoot":"","sources":["phone.factory.ts"],"names":[],"mappings":"AAAA,gBAAgB;;;;IAOhB,eAAe,SAAS;QACvB,MAAM,CAAC,SAAS,CAAC,sBAAsB,EAAE,EAAE,EAAE;YAC5C,KAAK,EAAE,EAAC,MAAM,EAAE,KAAK,EAAE,MAAM,EAAC,EAAC,OAAO,EAAE,QAAQ,EAAC,EAAE,OAAO,EAAE,IAAI,EAAC;SACjE,CAAC,CAAC;IACJ,CAAC;;;;YATD,kCAAkC;YAClC,6BAA6B;YAE7B,KAAK,CAAC,OAAO,GAAG,CAAC,WAAW,CAAC,CAAC;YAQ9B,oBAAe,KAAK,EAAC"}

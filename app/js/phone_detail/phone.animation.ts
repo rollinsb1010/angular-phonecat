@@ -1,7 +1,7 @@
-'use strict';
+// 'use strict';
 
-angular.module('phonecat.detail')
-  .animation('.phone', phoneAnimation);
+// angular.module('phonecat.detail')
+//   .animation('.phone', phoneAnimation);
 
 function phoneAnimation() {
 
@@ -13,3 +13,5 @@ function phoneAnimation() {
 	}
 
 }
+
+export default phoneAnimation;

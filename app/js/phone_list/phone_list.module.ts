@@ -1,5 +1,7 @@
-'use strict';
+// 'use strict';
+import PhoneListCtrl from './phone_list.controller';
 
-angular.module('phonecat.list', [
+export default angular.module('phonecat.list', [
   'phonecat.core'
-]);
+])
+  .controller('PhoneListCtrl', PhoneListCtrl);
